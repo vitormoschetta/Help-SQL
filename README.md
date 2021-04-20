@@ -207,3 +207,21 @@ from INFORMATION_SCHEMA.COLUMNS
 where TABLE_NAME='Client_address'
 ```
 
+
+<br>
+
+## Precision e Scale
+
+Quando declaramos tipos numéricos podemos informar a precisão e a escala:
+
+```
+PRICE NUMERIC(8,2)
+```
+
+A declaração acima quer dizer que o nosso valor pode conter 8 numeros, com duas casas decimais após a virgula. 
+
+Exemplo na imagem:
+
+![alt text](assets/img/image01.png?raw=true=250x250 "Title")
+
+
