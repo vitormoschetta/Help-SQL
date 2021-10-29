@@ -1,4 +1,4 @@
-No Sql Server não é possível utilizar a cláusula 'Like' em propriedades do tipo DateTime/Date. A solução é utilizar o código a baixo:
+-- No Sql Server não é possível utilizar a cláusula 'Like' em propriedades do tipo DateTime/Date. A solução é utilizar o código a baixo:
 
 
 ```

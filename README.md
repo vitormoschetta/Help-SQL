@@ -21,9 +21,10 @@ São comandos DCL : GRANT, REVOKE E DENY.
 
 # Resumo:
 
-**Views (Exibições)**: Tabela virtual formada a partir de outras tabelas. Simplifica consulta complexas.  
-**Trigger (Gatilho)**: Acionado ao executar Insert, Update ou Delete em uma determinada tabela.  
+**Views (Exibições)**: Tabela virtual formada a partir de outra(s) tabela(s). Simplifica consultas complexas.  
+**Trigger (Gatilho)**: Acionado ao executar uma ação (Insert, Update, Delete) em uma determinada tabela.  
 **Stored Procedures (Procedimentos armazenados)**: Função que executa scripts ao ser explicitamente invocada. Aceita parâmetros de entrada.  
+**Functions (Funções)**: Função que executa scripts ao ser explicitamente invocada. Aceita parâmetros de entrada e sempre retorna um valor. 
 **Job (trabalho)**: Qualquer script (processo), ou conjunto de scripts que devam ocorrer numa determinada ordem e em um determinado horário.
 
 
@@ -36,7 +37,7 @@ Uma tabela Virtual formada por outras tabelas.
 **Simplificação de consultas**: O DBA pode facilitar a vida dos programadores através das Views, uma vez que uma consulta complexa
 pode ser simplificada para uma consulta simples, como se fosse um atalho.
 
-Exemplo:
+Exemplo (SqlServer):
 
 #### Create Tables:
 ```
@@ -138,7 +139,6 @@ BEGIN
 
 	FROM inserted i
 END
-GO
 ```
 
 Observe que ao usar o Trigger, ele cria uma TABELA TEMPORÁRIA chamada 'inserted'. Ela contém os dados que adicionamos na tabela CLIENT_ADDRESS.
@@ -168,8 +168,7 @@ Aceita parâmetros de entrada.
 Exemplo:
 Com base nas mesmas tabelas (CLIENT e CLIENT_ADDRESS) dos exemplos anteriores, vamos criar a Procedure:
 ```
-CREATE PROCEDURE Search
-@CLIENT_NAME VARCHAR(50) 
+CREATE PROCEDURE Search @CLIENT_NAME VARCHAR(50) 
 AS
 SELECT	C.ID, C.CLIENT_NAME,
 		CA.STREET, CA.NUMBER, CA.NEIGHBORHOOD, CA.CITY, CA.COUNTRY 		
