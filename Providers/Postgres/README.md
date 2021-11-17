@@ -33,6 +33,7 @@ WHERE a.code = b.code
 AND a.ctid <> b.ctid
 ```
 
-**ctid** é um tipo de identificador de registros interno do postgresql.
+**ctid** é um tipo de identificador TEMPORÁRIO de registros interno do postgresql. Saiba mais sobre as colunas implícitas do postgresql:  
+<https://www.postgresql.org/docs/8.2/ddl-system-columns.html>
 
 
