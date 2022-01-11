@@ -20,3 +20,8 @@ Com o comando abaixo o Oracle não irá solicitar alteração de senha ao usuari
 ```
 ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 ```
+
+### LIKE Insensitive Case
+```
+SELECT * FROM MATERIAL m WHERE lower(m.DESCRICAO) LIKE '%medic%'
+```
