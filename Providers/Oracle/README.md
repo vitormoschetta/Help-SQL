@@ -29,3 +29,10 @@ or
 ```
 SELECT * FROM MATERIAL m WHERE upper(m.DESCRICAO) LIKE '%MEDIC%'
 ```
+
+
+### Commmit
+```
+COMMIT WORK;
+ROLLBACK WORK;
+```
