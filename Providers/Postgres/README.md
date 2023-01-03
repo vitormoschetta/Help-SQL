@@ -37,3 +37,10 @@ AND a.ctid <> b.ctid
 <https://www.postgresql.org/docs/8.2/ddl-system-columns.html>
 
 
+### Estatisca de banco de dados
+```
+select * from pg_catalog.pg_stat_activity
+```
+https://www.postgresql.org/docs/9.4/monitoring-stats.html
+
+
