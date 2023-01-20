@@ -44,3 +44,8 @@ select * from pg_catalog.pg_stat_activity
 https://www.postgresql.org/docs/9.4/monitoring-stats.html
 
 
+## Backup 
+
+https://github.com/vitormoschetta/Help-SQL/blob/main/Providers/Postgres/backup.md
+
+
